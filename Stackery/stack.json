@@ -1,43 +1,64 @@
 {
   "nodes": [
     {
-      "id": "d4a7a3c",
-      "type": "objectStore",
-      "name": "Private Data",
-      "x": 490,
-      "y": 200,
+      "id": "1",
+      "type": "tab"
+    },
+    {
+      "id": "4ba4b180",
+      "type": "function",
+      "name": "Hello!",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "noerr": true,
+      "x": 410,
+      "y": 220,
       "wires": [
         []
       ]
     },
     {
-      "id": "25d7f40d",
+      "id": "3411e99e",
       "type": "restApi",
-      "name": "API",
-      "path": "/*",
-      "domain": "test1.stackery.io",
-      "x": 120,
-      "y": 200,
+      "path": "/",
+      "x": 190,
+      "y": 220,
       "wires": [
         [
-          "cfb51555"
+          "4ba4b180"
         ]
       ]
     },
     {
-      "id": "cfb51555",
+      "id": "c2c9d21",
       "type": "function",
-      "name": "API Handler",
-      "outputs": 0,
+      "name": "Echo",
+      "outputs": 1,
       "memorySize": 128,
       "timeout": 30,
+      "runtime": "nodejs",
       "location": "inline",
-      "envVars": {
-        "BUCKET_ID": "${node.Private_Data.id}"
-      },
-      "x": 290,
-      "y": 200,
-      "wires": []
+      "noerr": true,
+      "x": 410,
+      "y": 280,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "664712dd",
+      "type": "restApi",
+      "path": "/{message}",
+      "x": 210,
+      "y": 280,
+      "wires": [
+        [
+          "c2c9d21"
+        ]
+      ]
     }
   ]
 }
