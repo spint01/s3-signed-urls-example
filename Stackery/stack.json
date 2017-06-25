@@ -1,10 +1,6 @@
 {
   "nodes": [
     {
-      "id": "1",
-      "type": "tab"
-    },
-    {
       "id": "4ba4b180",
       "type": "function",
       "name": "Hello!",
@@ -13,7 +9,7 @@
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
-      "noerr": true,
+      "envVars": {},
       "x": 410,
       "y": 220,
       "wires": [
@@ -24,6 +20,7 @@
       "id": "3411e99e",
       "type": "restApi",
       "path": "/",
+      "method": "POST",
       "x": 190,
       "y": 220,
       "wires": [
@@ -41,7 +38,7 @@
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
-      "noerr": true,
+      "envVars": {},
       "x": 410,
       "y": 280,
       "wires": [
