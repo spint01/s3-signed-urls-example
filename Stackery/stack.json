@@ -20,8 +20,9 @@
       "id": "3411e99e",
       "type": "restApi",
       "path": "/",
+      "domain": "api.sgpapps.com",
       "method": "POST",
-      "x": 190,
+      "x": 220,
       "y": 220,
       "wires": [
         [
@@ -49,7 +50,8 @@
       "id": "664712dd",
       "type": "restApi",
       "path": "/{message}",
-      "x": 210,
+      "domain": "api.sgpapps.com",
+      "x": 270,
       "y": 280,
       "wires": [
         [
